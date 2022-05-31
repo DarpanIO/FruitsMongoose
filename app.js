@@ -42,7 +42,13 @@ const person = new Person({
 age:19
 })
 // person.save()
-
+Person.deleteMany({name:"Darpan"},function(err){
+    if(err)
+    console.log(err);
+    else
+    console.log("Success");
+});
+person.save()
 
 Fruit.find(function(err,fruits){
     if(err)
